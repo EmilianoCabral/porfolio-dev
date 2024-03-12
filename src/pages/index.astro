@@ -7,14 +7,16 @@ import GitHub from "../components/icons/GitHub.astro";
 import Experience from "../components/Experience.astro";
 import Container from "../components/Container.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import Filebarcode from "../components/icons/Filebarcode.astro";
+import Proyects from "../components/Proyects.astro";
 ---
 
 <Layout title="Porfolio de Emiliano | Desarrollador y Programdor web."
 	description="Desarrollador web, especializado en crear aplicaciones web únicas "
 	>
-	<main>
-		<Container class="py-44 pb-24">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+	<main class="px-4">
+		<Container class="py-44 pb-32">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hey, soy Emiliano 
 				<a 
 					href="https://www.linkedin.com/in/emiliano-cabral-005100200/" 
@@ -24,7 +26,7 @@ import Briefcase from "../components/icons/Briefcase.astro";
 					<Badge>Disponible para trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl text-wrap"> <span>+1 año de experiencia</span>. 
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"> <span>+1 año de experiencia</span>. 
 				<span class="text-yellow-200/90">Desarrollador web</span>. 
 				<span class="text-pink-200/90">De Buenos aires, Argentina</span>. 
 				<span class="opacity-75">Especializado en crear aplicaciones web únicas </span> 
@@ -47,6 +49,13 @@ import Briefcase from "../components/icons/Briefcase.astro";
 				Experiencia laboral
 			</h2>
 			<Experience />
+		</Container>
+		<Container id="Proyectos">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Filebarcode class="w-7 h-7" />
+				Proyectos
+			</h2>
+			<Proyects />
 		</Container>
 	</main>
 </Layout>

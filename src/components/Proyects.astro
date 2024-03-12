@@ -1,0 +1,30 @@
+---
+const PROYECTS = [{
+    title: "Proyects 1",
+    descripcion: "Apoya a creadores de contenido y usa tus tokens para comprar tarjetas regalo o cambiarlos por otras monedas, entre otras cosas.",
+    link:"#",
+    github: "#",
+    image:"https://placehold.co/300x200",
+    tags: ["HTML","css","javascript",]
+
+}]
+---
+
+
+{
+    PROYECTS.map(({ title, descripcion, tags, image }) => (
+    <article>
+        <h3>{title}</h3>
+        <p>{descripcion}</p>
+        <ul>
+            {
+                tags.map(tags => (
+                    <li>{tags}</li>
+                ))
+            }
+            
+        </ul>
+        <img src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+    </article>
+    ))
+}
