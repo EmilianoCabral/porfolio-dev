@@ -14,8 +14,8 @@ const PROYECTS = [{
 {
     PROYECTS.map(({ title, descripcion, tags, image }) => (
     <article>
-        <h3>{title}</h3>
-        <p>{descripcion}</p>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{descripcion}</p>
         <ul>
             {
                 tags.map(tags => (
@@ -24,7 +24,10 @@ const PROYECTS = [{
             }
             
         </ul>
-        <img src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+        <img 
+        class="rounded shadow-2xl shadow-white/10"
+        src={image} 
+        alt={`Captura de pantalla del proyecto ${image}`}>
     </article>
     ))
 }

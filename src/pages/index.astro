@@ -9,6 +9,7 @@ import Container from "../components/Container.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Filebarcode from "../components/icons/Filebarcode.astro";
 import Proyects from "../components/Proyects.astro";
+import Aboutme from "../components/Aboutme.astro";
 ---
 
 <Layout title="Porfolio de Emiliano | Desarrollador y Programdor web."
@@ -44,18 +45,25 @@ import Proyects from "../components/Proyects.astro";
 		</Container>
 
 		<Container id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="w-7 h-7" />
 				Experiencia laboral
 			</h2>
 			<Experience />
 		</Container>
-		<Container id="Proyectos">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+		<Container id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Filebarcode class="w-7 h-7" />
 				Proyectos
 			</h2>
 			<Proyects />
+		</Container>
+		<Container id="sobre-mi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Filebarcode class="w-7 h-7" />
+				Sobre mí
+			</h2>
+			<Aboutme />
 		</Container>
 	</main>
 </Layout>
