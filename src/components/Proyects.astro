@@ -1,33 +1,90 @@
 ---
-const PROYECTS = [{
-    title: "Proyects 1",
-    descripcion: "Apoya a creadores de contenido y usa tus tokens para comprar tarjetas regalo o cambiarlos por otras monedas, entre otras cosas.",
-    link:"#",
-    github: "#",
-    image:"https://placehold.co/300x200",
-    tags: ["HTML","css","javascript",]
+import Link from "./icons/Link.astro"
+import Linkbutton from "./Linkbutton.astro"
+import GitHub from "./icons/GitHub.astro"
+import Html from "./icons/Html.astro"
+import Css from "./icons/Css.astro"
+import Javascript from "./icons/Javascript.astro"
 
-}]
+const TAGS = {
+    HTML:{
+        name:"HTML",
+        class:"bg-black text-white",
+        icon: Html,
+    },
+    CSS:{
+        name:"CSS",
+        class:"bg-black text-white",
+        icon: Css,
+    },
+    JAVASCRIPT:{
+        name:"Javascript",
+        class:"bg-black text-white",
+        icon: Javascript,
+    }
+}
+const PROYECTS = [
+        {
+        title: "Proyects 1",
+        descripcion: "This was my first project as a developer. A simple and fully responsive website. It has cards with information, a menu and some sections.",
+        link:"https://emilianocabral.github.io/Gamingpro/pages/noticias.html",
+        github: "https://github.com/EmilianoCabral/Gamingpro",
+        image:"/progamin.png",
+        tags: [TAGS.HTML,TAGS.CSS],
+    },
+    {
+        title: "Proyects 2",
+        descripcion: "This was my first project as a developer. A simple and full responsive website. It has a contact form, an image gallery carousel, a menu, and some sections.",
+        link:"https://emilianocabral.github.io/E-commerce/",
+        github: "https://github.com/EmilianoCabral/E-commerce",
+        image:"/Carro-de-compras.png",
+        tags: [TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT],
+    },
+]
 ---
 
 
 {
-    PROYECTS.map(({ title, descripcion, tags, image }) => (
-    <article>
-        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+    PROYECTS.map(({ title, descripcion, tags, image, github, link }) => (
+    <article class="flex flex-col mt-8 space-x-0 space-y-8 group md:space-y-0">
+        <h3 class="text-2xl font-semibold text-[#D1BB9E] mb-2">{title}</h3>
         <p class="text-lg mb-4 text-pretty">{descripcion}</p>
-        <ul>
-            {
-                tags.map(tags => (
-                    <li>{tags}</li>
-                ))
-            }
-            
-        </ul>
-        <img 
-        class="rounded shadow-2xl shadow-white/10"
-        src={image} 
-        alt={`Captura de pantalla del proyecto ${image}`}>
+        <section>
+            <ul class="flex flex-wrap gap-4  items-center p-2">
+                {tags.map((tag) => (
+                <li>
+                    <span
+                    class={` items-center flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                    <tag.icon class="w-6 h-6 size-4" />
+                    {tag.name}
+                    </span>
+                </li>
+                ))}
+                
+                {github && (
+                    <Linkbutton href={github}>
+                        <GitHub class="size-6" />
+                        Code
+                    </Linkbutton>
+                )}
+                {link && (
+                    <Linkbutton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                    </LinkButton>
+                )}
+            </ul>
+        </section>
+        <div class="w-full md:w-auto">
+            <div class="">
+                <img 
+                    class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+                    src={image} 
+                    alt={`Captura de pantalla del proyecto ${image}`}>
+            </div>
+        </div>
+        
     </article>
     ))
 }
