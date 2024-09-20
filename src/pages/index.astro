@@ -1,70 +1,49 @@
 ---
 import ProfileChek from "../components/icons/profileChek.astro";
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import Linkedin from "../components/icons/Linkedin.astro";
-import Socialpill from "../components/Socialpill.astro";
-import GitHub from "../components/icons/GitHub.astro";
 import Experience from "../components/Experience.astro";
 import Container from "../components/Container.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Filebarcode from "../components/icons/Filebarcode.astro";
 import Proyects from "../components/Proyects.astro";
 import Aboutme from "../components/Aboutme.astro";
+import TitleSection from "../components/TitleSection.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<Layout title="Porfolio de Emiliano | Desarrollador y Programdor web."
-	description="Desarrollador web, especializado en crear aplicaciones web únicas "
-	>
-	<main class="px-4">
-		<Container class="py-44 pb-32">
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hey, I'm Emiliano 
-				<a 
-					href="https://www.linkedin.com/in/emiliano-cabral-005100200/" 
-					target="_blank" 
-					rel="noopener" 
-					class="flex justify-center items-center">
-					<Badge>Available to work</Badge>
-				</a>
-			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"> <span>+1 year of experience</span>. 
-				<span class="text-[#D1BB9E]">Web developer</span>. 
-				<span class="text-[#a78f77]">From Buenos Aires, Argentina</span>. 
-				<span class="opacity-75">Specialized in creating unique web applications </span> 
-			</h2>
-				<nav class="flex gap-x-4 mt-8">
-					<Socialpill href="https://www.linkedin.com/in/emiliano-cabral-005100200/">
-						<Linkedin class="w-6 h-6" />
-						LinkedIn
-					</Socialpill>
-					<Socialpill href="https://github.com/EmilianoCabral">
-						<GitHub class="w-6 h-6" />
-						GitHub
-					</Socialpill>
-				</nav>
-		</Container>
-		<Container id="experiencia">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Briefcase class="w-7 h-7" />
-				Work experience
-			</h2>
-			<Experience />
-		</Container>
-		<Container id="proyectos">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Filebarcode class="w-7 h-7" />
-				Projects
-			</h2>
-			<Proyects />
-		</Container>
-		<Container id="sobre-mi">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<ProfileChek class="w-7 h-7" />
-				About me
-			</h2>
-			<Aboutme />
-		</Container>
-	</main>
-</Layout>
+<Layout
+  title="Porfolio de Emiliano | Desarrollador y Programdor web."
+  description="Desarrollador web, especializado en crear aplicaciones web únicas "
+>
+  <main class="px-4">
+    <Container class="py-16 md:py-36">
+      <Hero />
+    </Container>
 
+	<div class="space-y-24">
+	  <Container id="experiencia">
+		<TitleSection>
+		  <Briefcase class="size-8" />
+		  Work experience
+		</TitleSection>
+		  <Experience />
+	  </Container>
+  
+	  <Container id="proyectos">
+		<TitleSection>
+		  <Filebarcode class="size-7" />
+		  Projects
+		</TitleSection>
+		  <Proyects />
+	  </Container>
+
+	  <Container id="sobre-mi">
+		<TitleSection>
+		  <ProfileChek class="size-8" />
+		  About me
+		</TitleSection>
+		  <Aboutme />
+	  </Container>
+	</div>
+  </main>
+</Layout>
