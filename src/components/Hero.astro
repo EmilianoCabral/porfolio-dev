@@ -4,9 +4,11 @@ import Badge from "../components/Badge.astro"
 import LinkedInIcon from "../components/icons/Linkedin.astro"
 import MailIcon from "../components/icons/Email.astro"
 import Socialpill from "./Socialpill.astro"
+import GitHub from "./icons/GitHub.astro"
+import Stackoverflow from "./icons/Stackoverflow.astro"
 ---
 
-<div class="max-w-xl">
+<div class="max-w-screen-md">
   <div class="flex gap-4 mb-4">
     <img
       class="rounded-full shadow-lg size-16"
@@ -43,5 +45,13 @@ import Socialpill from "./Socialpill.astro"
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>
+    <Socialpill href="https://github.com/EmilianoCabral">
+      <GitHub class="size-4"/>
+      GitHub
+    </Socialpill>
+    <Socialpill href="https://stackoverflow.com/users/26706407/emilianocabral">
+      <Stackoverflow class="size-7"/>
+      Stackoverflow
+    </Socialpill>
   </nav>
 </div>

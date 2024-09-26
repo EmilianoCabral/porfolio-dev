@@ -5,6 +5,8 @@ import GitHub from "./icons/GitHub.astro";
 import Html from "./icons/Html.astro";
 import Css from "./icons/Css.astro";
 import Javascript from "./icons/Javascript.astro";
+import Sass from "./icons/Sass.astro";
+import Bootstrap from "./icons/Bootstrap.astro"
 
 const TAGS = {
   HTML: {
@@ -22,6 +24,16 @@ const TAGS = {
     class: "bg-black text-white",
     icon: Javascript,
   },
+  SASS: {
+    name: "Sass",
+    class: "bg-black text-white",
+    icon: Sass,
+  },
+  BOOtSTRAP: {
+    name: "Bootstrap",
+    class: "bg-black text-white",
+    icon: Bootstrap,
+  }
 };
 const PROJECTS = [
   {
@@ -31,7 +43,7 @@ const PROJECTS = [
     link: "https://emilianocabral.github.io/Gamingpro/pages/noticias.html",
     github: "https://github.com/EmilianoCabral/Gamingpro",
     image: "/progamin.png",
-    tags: [TAGS.HTML, TAGS.CSS],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.BOOtSTRAP],
   },
   {
     title: "Proyects 2",
@@ -40,7 +52,7 @@ const PROJECTS = [
     link: "https://emilianocabral.github.io/E-commerce/",
     github: "https://github.com/EmilianoCabral/E-commerce",
     image: "/Carro-de-compras.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.BOOtSTRAP],
   },
 ];
 ---
