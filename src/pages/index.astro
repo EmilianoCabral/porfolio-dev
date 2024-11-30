@@ -9,13 +9,12 @@ import Proyects from "../components/Proyects.astro";
 import Aboutme from "../components/Aboutme.astro";
 import TitleSection from "../components/TitleSection.astro";
 import Hero from "../components/Hero.astro";
-import Certificados from "../components/Certificados.astro";
-import Stackoverflow from "../components/icons/Stackoverflow.astro";
+import Certificates from "../components/Certificates.astro";
 ---
 
 <Layout
-  title="Porfolio de Emiliano | Desarrollador y Programdor web."
-  description="Desarrollador web, especializado en crear aplicaciones web únicas "
+  title="Emiliano Portfolio | Web Developer and Programmer."
+  description="Developer web"
 >
   <main class="px-4">
     <Container class="py-16 md:py-36">
@@ -23,36 +22,37 @@ import Stackoverflow from "../components/icons/Stackoverflow.astro";
     </Container>
 
     <div class="space-y-24">
-      <Container id="experiencia">
+      <Container id="experience">
         <TitleSection>
           <Briefcase class="size-8" />
-          Experiencia
+          Experience
         </TitleSection>
         <Experience />
       </Container>
 
-      <Container id="proyectos">
+      <Container id="projects">
         <TitleSection>
           <Filebarcode class="size-7" />
-          Proyectos
+          Projects
         </TitleSection>
         <Proyects />
       </Container>
 
-      <Container>
-        <TitleSection>
-          Certificados
-        </TitleSection>
-		<Certificados />
-      </Container>
-
-      <Container id="sobre-mi">
+      <Container id="About-me">
         <TitleSection>
           <ProfileChek class="size-8" />
-          Sobre mi
+          About me
         </TitleSection>
         <Aboutme />
       </Container>
+
+      <Container>
+        <TitleSection>
+          certificates
+        </TitleSection>
+		<Certificates />
+      </Container>
+
     </div>
   </main>
 </Layout>

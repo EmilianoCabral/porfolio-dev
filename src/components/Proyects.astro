@@ -7,6 +7,12 @@ import Css from "./icons/Css.astro";
 import Javascript from "./icons/Javascript.astro";
 import Sass from "./icons/Sass.astro";
 import Bootstrap from "./icons/Bootstrap.astro"
+import PostgreSQL from "./icons/PostgreSQL.astro";
+import Typescript from "./icons/Typescript.astro"
+import Icon from "./icons/Icon.astro"
+import Node from "./icons/Node.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Docker from "./icons/Docker.astro"
 
 const TAGS = {
   HTML: {
@@ -33,26 +39,64 @@ const TAGS = {
     name: "Bootstrap",
     class: "bg-black text-white",
     icon: Bootstrap,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class:"bg-black text-white",
+    icon: PostgreSQL
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class:"bg-black text-white",
+    icon: Typescript
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: Icon
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-black text-white",
+    icon: Node
+  },
+  TAILWIND: {
+    name: "Tailwind css",
+    class: "bg-black text-white",
+    icon: Tailwind
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-black text-white",
+    icon: Docker
   }
 };
 const PROJECTS = [
   {
-    title: "Proyecto 1",
+    title: "Project 1",
     description:
-      "Este fue mi primer proyecto como desarrollador, una página web sencilla y completamente responsive. Incluye tarjetas informativas, un menú de navegación y varias secciones.",
-    link: "https://emilianocabral.github.io/Gamingpro/pages/noticias.html",
-    github: "https://github.com/EmilianoCabral/Gamingpro",
-    image: "/progamin.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.BOOtSTRAP],
-  },
-  {
-    title: "Proyecto 2",
-    description:
-      "Este proyecto me permitió profundizar en el manejo de eventos, la manipulación del DOM y la persistencia de datos en localStorage, además de enfrentar desafíos relacionados con la optimización de la experiencia del usuario.",
+      "This project allowed me to delve deeper into event handling, DOM manipulation, and data persistence in localStorage, as well as address challenges related to user experience optimization.",
     link: "https://emilianocabral.github.io/E-commerce/",
     github: "https://github.com/EmilianoCabral/E-commerce",
     image: "/Carro-de-compras.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.BOOtSTRAP],
+  },
+  {
+    title: "Project 2",
+    description:
+      "This project allowed me to not only dive deeper into using Astro to develop fast, optimized websites while applying design principles with Tailwind CSS, but also drive business growth through increased visibility and online presence.",
+    link: "https://estudiojuridicoo.netlify.app/",
+    github: "https://github.com/EmilianoCabral/Landing-page-01",
+    image: "/img-08.png",
+    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.ASTRO],
+  },
+  {
+    title: "Project 3",
+    description:
+      "This project allowed me to reinforce my knowledge in backend development, relational databases, and typescript integration to write more secure and maintainable code.",
+    github: "https://github.com/EmilianoCabral/api-rest-typescript-auth-jws",
+    image: "/img-09.webp",
+    tags: [TAGS.NODEJS,TAGS.POSTGRESQL, TAGS.TYPESCRIPT, TAGS.DOCKER],
   },
 ];
 ---
@@ -63,7 +107,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Image" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
@@ -91,7 +135,6 @@ const PROJECTS = [
             <Linkbutton href={github}>
               <GitHub class="size-6" />
               Code
-              
             </LinkButton>
           )}
           {link && (
